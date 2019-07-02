@@ -1,0 +1,180 @@
+/*HEADER*/
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	
+	&:active, &:visited {
+  	text-decoration: none;
+  }
+}
+
+p {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+main {
+	display: block;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+}
+
+$button-color:#0aaee4;
+
+.basis {
+	min-width: 360px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f1f2f2;
+	
+	&--spage {
+  	background-color: #f1f2f2;
+  }
+}
+
+.roof {
+	position: relative;	
+	
+	&--spage {
+  	padding: 16px 12px;
+  	background-color: #f5f6f6;
+  }
+}
+
+.roof-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	left: 12px;
+	top: 14px;
+	right: 12px;	
+	
+	&--spage {
+  	position: relative;
+  	left: 0;
+  	top: 0;
+  	right: 0;
+  }
+}
+
+.header-logo {	
+	font-size: 16px;
+	color: #ffffff;
+	text-transform: uppercase;
+	
+	&:hover {
+  	text-shadow: 0px 0px 12px #114263;;
+  }
+  
+  &--spage {
+  	color: #0aaee4;
+  }
+}
+
+.logo-mod {
+	font-weight: 700;
+}
+
+.site-btn {
+	padding: 6px 14px;
+	border-radius: 2px;
+	background-color: $button-color;	
+	color: #ffffff;
+	font-size: 14px;
+
+	&:hover {	
+		background-color: #ed0030;	
+	}
+}
+
+
+
+.switcher {	
+	display: flex;
+	align-self: end;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);	
+	bottom: 32px;	
+
+	&-item {	
+		border-radius: 3px;
+		width: 24px;
+		height: 6px;
+		background-color: rgb(255, 255, 255);
+	  	opacity: 0.502;
+	  	cursor: pointer;
+	}	
+}
+
+.visited {
+	background-color: #0aaee4;
+	opacity: 1;
+}
+
+.switcher-item + .switcher-item {
+	margin-left: 22px;
+}
+
+.slider {
+	height: 260px;
+	width: 100%;
+}
+
+.slider-item {
+	display: none;
+}
+
+.visible {
+	display: block;
+}
+
+.slider-link {
+	display: block;
+}
+
+.slider-link__description {	
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);	
+	top: 180px;	
+}
+
+.description-head {
+	margin: 0;
+	color: #ffffff;
+	font-size: 18px;
+	letter-spacing: 1px;
+	text-align: center;
+	text-transform: uppercase;	
+}
+
+.description-bottom {	
+	font-size: 16px;
+	color: #ffffff;
+	width: 390px;
+	display: none;
+}
+
+.slider-img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+
+/*HEADER*/

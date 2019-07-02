@@ -1,0 +1,377 @@
+/*MAIN*/
+$button-color:#0aaee4;
+
+.backbone {
+	padding: 30px 10px 36px 10px;
+	background-color: #f1f2f2;
+	
+	&--spage {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+  }
+}
+
+.film-preview {	
+  
+  iframe {
+  	width: 100%;
+  	height: 270px;
+  	border: none;
+  }
+}
+
+.film-type {
+	font-size: 18px;
+	margin: 0 0 8px 0;
+
+  &--spage {
+  	margin: 0 12px 10px 12px;
+  }
+}
+
+.film-container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -4px;
+	
+  &--spage {
+    padding: 0 12px;
+  }
+}
+
+.film-card {	
+	margin: 0 4px 12px 4px;
+	border-radius: 4px;
+	width: calc(50% - 8px);
+	background-color: #ffffff;
+	text-decoration: none;	
+}
+
+.film-card__pic {
+	position: relative;	
+	height: 146px;
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	object-fit: cover;
+}
+
+.film-card__details {	
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 146px;
+	border-radius: 4px 4px 0 0;	
+	background-color: black;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10;
+	text-align: center;
+	transition: all 0.3s ease;	
+	
+	&::before {
+  	content:'';
+  	display: block;
+  	margin: 30px auto 30px auto;
+  	width: 40px;
+  	height: 40px;
+  	background: url(../img/play.png) no-repeat center center;
+  }
+  
+  &::after {
+  	content:'View Info';
+  	display: inline-block;
+  	padding: 3px 16px;
+  	font-size: 10px;
+  	color: #ffffff;
+  	border: 1px solid #ffffff;
+  	border-radius: 6px;
+  	background-color: black;	
+  }
+}
+
+.film-card:hover .film-card__details {
+	visibility: visible;
+	opacity: 0.8;
+}
+
+
+.film-card__desc {
+	padding: 10px 8px;
+	
+	&--spage {
+  	padding: 32px 12px;
+  }
+}
+
+.desc-name {
+	margin: 0 0 2px 0;
+	font-size: 12px;
+	color: #242b2d;
+	text-transform: uppercase;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	&--spage {
+	  	font-size: 18px;	
+	  	margin: 0 0 16px 0;
+	}
+}
+
+.desc-charact {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 9px;
+	color: #47c3f0;
+	
+  	&--spage {
+  	display: block;
+  }
+}
+
+.genre-block {
+	color: #47c3f0;
+}
+
+.desc-text {
+	font-size: 14px;
+	color: #010101;
+	margin-bottom: 24px;
+}
+
+.desc-charact__genre {	
+	color: #47c3f0;
+	
+  	&--spage {
+  	display: inline-block;
+  	font-size: 14px;
+  	margin-bottom: 15px;
+  }
+}
+
+.rating-stars {
+	display: flex;
+	align-items: center;
+}
+
+#radio1,#radio2,#radio3,#radio4,#radio5 {display: none;}
+
+#radio1:checked ~ .star1,#radio2:checked ~ .star2,#radio3:checked ~ .star3,#radio4:checked ~ .star4,#radio5:checked ~ .star5 {
+  background-image: url('../img/starb.png');
+}
+
+.rating-stars__item {
+	width: 25px;
+	height: 24px;
+  	background-image: url('../img/starg.png');
+  	cursor: pointer;  
+}
+
+.rating-stars__item + .rating-stars__item {
+	margin-left: 9px;
+}
+.rating-stars__item + .desc-charact__rating {
+	margin-left: 9px;
+}
+
+
+.desc-charact__rating {	
+	padding: 1px 4px;	
+	border: 1px solid #47c3f0;
+	border-radius: 2px;
+	
+  	&--spage {
+  	font-size: 16px;
+  	border-radius: 6px;
+  }
+}
+
+.subscription {
+	display: flex;
+	flex-direction: column;
+	margin: 24px 0;
+	padding: 32px 26px 43px 26px;
+	background-image: url('../img/subscr.png');
+	background-position: center;	
+	
+	&--spage {
+  	margin: 32px 12px;
+  }
+  
+  &__text {
+  	font-size: 34px;
+  	line-height: 39px;
+  	color: #ffffff;
+  	text-align: center;
+  	margin-bottom: 22px;
+  }
+  
+    &__cont {
+  	display: flex;
+  	flex-direction: column;	
+  }
+}
+
+.cont-field {
+	padding: 14px 30px;
+	margin-bottom: 8px;
+	font-size: 24px;
+	color: #242b2d;
+	background-color: #c7c8c7;
+	opacity: 0.749;
+	border-radius: 4px;
+	border-style: none;
+	cursor: pointer; 
+}
+
+.cont-btn {
+	padding: 14px 86px;
+	background-color: $button-color;
+	border-radius: 4px;
+	border-style: none; 
+	font-size: 24px;
+	color: #ffffff;
+}
+
+.promo {
+	display: flex;
+	flex-direction: column;
+	
+	&-block {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  	font-family: 'Yanone Kaffeesatz', sans-serif;
+  	
+	  	&__main {
+	    	width: 100%;
+	    	height: 260px;
+	    	margin-bottom: 8px;
+	    	padding: 30px 22px 0 22px;
+	    	background-color: #cccccc;			
+	    }
+	}
+}
+
+.resize {
+	cursor: pointer;
+	transition:all 0.3s ease;	
+}
+
+.resize:hover {
+  	transform: scale(1.03);
+}
+
+.main-items {
+	display: flex;
+	flex-direction: column;	
+	
+	&__ch {
+  	font-size: 47px;	
+  	font-weight: bold;
+  	color: #ffffff;
+  	margin: 0 0 6px 0;
+  	text-shadow: 0px 4px 21px rgba(210, 198, 185, 0.76);
+  }
+
+  &__pz {
+  	font-size: 25px;
+  	font-weight: 200;	
+  	color: #ffffff;
+  	margin: 0 0 14px 0;
+  }
+
+  &__tag {
+  	display: inline-block;
+  	padding: 6px 14px;
+  	border-radius: 6px;
+  	background-color: #ed0030;	
+  	font-size: 24px;
+  	font-weight: 300;	
+  	color: #ffffff;
+  	margin: 0 0 70px 0; 
+  }
+
+  &__under {
+  	font-size: 8px;	
+  	color: #ffffff;	
+  }
+}
+
+.promo-block__item {
+	display: flex;
+	justify-content: flex-end;		
+	width: calc(50% - 4px);
+	height: 126px;
+	padding: 20px;
+	background-color: #cccccc;
+}
+
+.item-wrapper {
+	width: 70px;
+	
+	&__header {	
+	  	font-size: 29px;
+	  	font-weight: 200;	
+	  	font-family: 'Yanone Kaffeesatz', sans-serif;	
+	  	color: #ffffff;
+	  	text-align: center;
+	  	margin: 0 0 10px 0;
+	}
+
+  	&__under {
+		font-size: 8px;		
+		color: #ffffff;
+		text-align: center; 
+		margin: 0;
+	}
+}
+
+.mod {
+	font-size: 35px;
+	font-weight: 700;
+}
+
+.modifier {
+	text-decoration: underline;
+}
+
+.robmod {
+	font-family: 'Roboto Condensed', sans-serif;	
+}
+
+@mixin size($width: 50px,$height: 100px) {
+	width: $width;
+	height: $height;
+}
+
+.promo-block__order {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include size (100%,126px);
+	//width: 100%;
+	//height: 126px;
+	margin-top: 8px;
+	background-color: #cccccc;
+}
+
+.order-text {	
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	font-size: 35px;
+	color: #ffffff;	
+	
+	sup {
+  	vertical-align: super;
+  	font-weight: 300;
+  	font-size: 21px;
+  	color: #fdba3e;
+  }
+}
+
+/*MAIN*/
