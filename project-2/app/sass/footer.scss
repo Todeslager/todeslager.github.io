@@ -63,10 +63,14 @@
   	align-items: center;
   	width: 36px;
   	height: 36px;
-  	cursor: pointer;
+  	cursor: pointer;  	
 
-  	&:hover {
-    	box-shadow: 0px 0px 8px 0px #00b1e6;
+    svg {
+    	fill: gray;    	
+
+    	&:hover {
+	    	fill: blue;
+	    }
     }	
   }
 
